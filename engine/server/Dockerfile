@@ -6,7 +6,7 @@ ARG TARGETARCH
 
 WORKDIR /run
 
-ADD ./webapp ./webapp
+# ADD ./webapp ./webapp
 
 COPY ./build/kurtosis-engine.$TARGETARCH ./kurtosis-engine
 

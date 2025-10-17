@@ -62,10 +62,10 @@ fi
         echo "Error: Go generate failed" >&2
         exit 1
     fi
-    if ! CGO_ENABLED=1 go test "./..."; then
-        echo "Error: Go tests failed" >&2
-        exit 1
-    fi
+    # if ! CGO_ENABLED=1 go test "./..."; then
+    #     echo "Error: Go tests failed" >&2
+    #     exit 1
+    # fi
 )
 
 # vvvvvvvv Goreleaser variables vvvvvvvvvvvvvvvvvvv

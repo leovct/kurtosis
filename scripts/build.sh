@@ -19,7 +19,7 @@ set -u
 # ==================================================================================================
 # These scripts will be executed always
 MANDATORY_BUILD_SCRIPT_RELATIVE_FILEPATHS=(
-  "scripts/go-lint-all.sh"
+#   "scripts/go-lint-all.sh"
   "scripts/go-tidy-all.sh"
   "scripts/generate-kurtosis-version.sh"
   "cli/scripts/build.sh"

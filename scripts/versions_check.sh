@@ -51,7 +51,7 @@ check_go_version() {
     echo "${RED_BG}${WHITE_FG}${BOLD}GO "${REQUIRED_GO_VERSION}" not installed. Found ${local_go_version}${NORMAL_BG}"
     error=true
   else
-    echo "${BLUE_BG}${WHITE_FG}${BOLD}Minimum GO version "${REQUIRED_GO_VERSION}" expected. Found ${local_go_version} ... ok${NORMAL_BG}"
+    echo "${BLUE_BG}${WHITE_FG}${BOLD}Minimum go version "${REQUIRED_GO_VERSION}" expected. Found ${local_go_version} ... ok${NORMAL_BG}"
 
   fi
 }
