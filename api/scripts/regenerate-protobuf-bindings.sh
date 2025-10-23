@@ -33,18 +33,18 @@ for output_dirname in "${OUTPUT_DIRNAMES[@]}"; do
     echo "Successfully generated ${output_dirname} Go bindings in directory '${go_output_dirpath}'"
 
     # TypeScript
-    typescript_output_dirpath="${api_dirpath}/${TYPESCRIPT_DIRNAME}/src/${output_dirname}/${rpc_bindings_dirname}"
-    if ! "${GENERATOR_SCRIPT_FILENAME}" "${input_dirpath}" "${typescript_output_dirpath}" typescript; then
-        echo "Error: An error occurred generating ${output_dirname} TypeScript bindings in directory '${typescript_output_dirpath}'" >&2
-        exit 1
-    fi
-    echo "Successfully generated ${output_dirname} TypeScript bindings in directory '${typescript_output_dirpath}'"
+    # typescript_output_dirpath="${api_dirpath}/${TYPESCRIPT_DIRNAME}/src/${output_dirname}/${rpc_bindings_dirname}"
+    # if ! "${GENERATOR_SCRIPT_FILENAME}" "${input_dirpath}" "${typescript_output_dirpath}" typescript; then
+    #     echo "Error: An error occurred generating ${output_dirname} TypeScript bindings in directory '${typescript_output_dirpath}'" >&2
+    #     exit 1
+    # fi
+    # echo "Successfully generated ${output_dirname} TypeScript bindings in directory '${typescript_output_dirpath}'"
 
     # Rust
-    rust_input_dirpath="${api_dirpath}/${RUST_DIRNAME}"
-    if ! KURTOSIS_REGENERATE_BINDINGS=1 cargo build --manifest-path "${rust_input_dirpath}/Cargo.toml"; then
-        echo "Error: An error occurred generating Rust bindings in directory '${rust_input_dirpath}'" >&2
-        exit 1
-    fi
-    echo "Successfully generated Rust bindings in directory '${rust_input_dirpath}'"
+    # rust_input_dirpath="${api_dirpath}/${RUST_DIRNAME}"
+    # if ! KURTOSIS_REGENERATE_BINDINGS=1 cargo build --manifest-path "${rust_input_dirpath}/Cargo.toml"; then
+    #     echo "Error: An error occurred generating Rust bindings in directory '${rust_input_dirpath}'" >&2
+    #     exit 1
+    # fi
+    # echo "Successfully generated Rust bindings in directory '${rust_input_dirpath}'"
 done
